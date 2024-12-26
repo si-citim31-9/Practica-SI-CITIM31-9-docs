@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  INSTANCE: 'Writerside/Práctica SI-CITIM31-9'
+  INSTANCE: 'Writerside/ps'
   DOCKER_VERSION: '243.22562'
 
 jobs:
