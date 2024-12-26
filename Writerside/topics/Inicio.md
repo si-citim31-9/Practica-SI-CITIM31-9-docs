@@ -4,4 +4,4 @@ Esta es la documentación del proyecto final de la asignatura Sistemas Inteligen
 
 El proyecto se divide principalmente en dos partes:
  - Segmentación de imágenes
- - Entrenamiento y reconocimiento de carácteres
+ - [Entrenamiento y reconocimiento de carácteres](Suite-de-Entrenamiento.md)
