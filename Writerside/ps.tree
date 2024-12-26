@@ -4,9 +4,9 @@
 
 <instance-profile id="ps"
                  name="Práctica SI-CITIM31-9"
-                 start-page="starter.md">
+                 start-page="Inicio.md">
 
-    <toc-element topic="starter.md"/>
+    <toc-element topic="Inicio.md"/>
     <toc-element topic="Suite-de-Entrenamiento.md">
         <toc-element topic="Entrenamiento.md"/>
         <toc-element topic="Extracción-de-Descriptores.md"/>
