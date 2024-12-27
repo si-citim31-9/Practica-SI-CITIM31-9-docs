@@ -22,11 +22,25 @@ path_recursos
 > Siendo los números (0-35) es decir (0-9 y a-z) y el índice representando el número de archivo en la carpeta.
 
 <br/>
+```
+extraccion_batch(imagenes, opciones, debug_level)
+```
+Función que extrae de un ```dict``` con la estructura ```(imagen,etiqueta)``` los descriptores indicados en una lista con varias opciones.
+Devuelve una lista de listas en las que, por cada descriptor/grupo de descriptores extraídos, incluye ```tipo de extracción```,```opciones``` y ```path del fichero generado```.
+
+images
+: ```dict (imagen,etiqueta)``` Debe contener la imagen extraída con OpenCV.IMREAD y su correspondiente etiqueta.
+
+opciones
+: ```list[(tipo,opciones)]``` Debe contener, por cada tipo de extracción a realizar, su tipo en forma de ```string``` y sus opciones con forma ```list```.
+
+debug_level
+: ```int```: cantidad de notificaciones que deben mostrarse en pantalla sobre el progreso. Por defecto es 0.
 
 ```
-extraccion(images, opciones, fichero_destino, **kwargs)
+extraccion(images, opciones, fichero_destino, debug_level, **kwargs)
 ```
-Función que extrae de un ```dict``` con la estructura ```(imagen,etiqueta)``` los descriptores indicados en el resto de los parámetros, devolviendo un archivo ```ARFF```
+Función que extrae de un ```dict``` con la estructura ```(imagen,etiqueta)``` el descriptor indicado en el resto de los parámetros, devolviendo un archivo ```ARFF```
 
 images
 : ```dict (imagen,etiqueta)``` Debe contener la imagen extraída con OpenCV.IMREAD y su correspondiente etiqueta. 
@@ -37,17 +51,20 @@ opciones
 fichero_destino
 : ```String``` que contiene el ```path``` en el que la función tendrá que crear el archivo ARFF
 
+debug_level
+: ```int```: cantidad de notificaciones que deben mostrarse en pantalla sobre el progreso. Por defecto es 0.
+
 **kwargs
 : ```list``` con contenido que depende de la opción elegida en el parámetro ```opciones```.
 - "Histogramas": los kwargs deberán contener una ```list``` llamada ```histoptions``` con los parámetros:
     - ```Orientaciones```: int
-    - ```Píxeles por celda```: (int,int)
-    - ```Celdas por bloque```: (int,int)
+    - ```Píxeles por celda```: int
+    - ```Celdas por bloque```: int
     - ```feature_vector```: Boolean
 - "Formas": los kwargs deberán contener una ```list``` llamada "formas" en las que se incluyen las funciones para extraer los descriptores de formas:
     - ```descriptores.formas.hu_moments``` 
     - ```descriptores.formas.aspect_ratio``` 
-    - ```descriptores.formas.euler_moment``` [docs](https://sydney4.medium.com/the-euler-number-of-a-binary-image-1d3cc9e57caa)
+    - ```descriptores.formas.euler_moment``` 
     - ```descriptores.formas.compactness``` 
 
 
