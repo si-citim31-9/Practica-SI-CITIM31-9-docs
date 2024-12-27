@@ -9,7 +9,7 @@ Este paquete contiene dos módulos:
 ### Funciones 
 
 ```
-training(dataset, fichsalida, clasificador,debug_level)
+training(dataset, fichsalida, clasificador, debug_level)
 ```
 Esta función realiza el entrenamiento de un modelo a partir del dataset propocionado. 
 Devuelve un ```list``` con la forma ```[dataset,fichsalida,modelo]```
