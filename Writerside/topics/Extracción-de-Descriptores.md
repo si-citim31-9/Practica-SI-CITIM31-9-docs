@@ -96,7 +96,7 @@ hu_moments(image)
 Función que devuelve los momentos invariables de Hu en forma ```list (float)``` de una imagen. [docs](https://docs.opencv.org/3.4/d0/d49/tutorial_moments.html)
 
 image
-: ```np.array```: que contiene la imagen extraída por OpenCV
+: ```np.array```: contiene la imagen extraída por OpenCV
 
 <br/>
 ```
@@ -105,4 +105,29 @@ euler_number(image)
 Función que devuelve el número de Euler en forma ```float``` de una imagen. [docs](https://docs.opencv.org/4.x/d1/d32/tutorial_py_contour_properties.html)
 
 image
-: ```np.array```: que contiene la imagen extraída por OpenCV
+: ```np.array```: contiene la imagen extraída por OpenCV
+
+## histogramasgo.py
+
+### Funciones de Histogramas:
+
+```
+extraer_histogramas(imagen,orientaciones, pixelspercell,cellsperblock,tamano)
+```
+Función que extrae los histogramas de una imagen en forma de ```list```.
+
+imagen
+: ```np.array```: contiene la imagen extraída por OpenCV
+
+orientaciones
+: ```int```: número de orientaciones de las que extraer los histogramas
+
+pixelspercell
+: ```int```: número de píxeles por celda
+
+
+cellsperblock
+: ```int```: número de celdas por bloque
+
+tamano
+: ```(int,int)```: área sobre la que operar para extraer los histogramas
