@@ -10,5 +10,6 @@
     <toc-element topic="Suite-de-Entrenamiento.md">
         <toc-element topic="Entrenamiento.md"/>
         <toc-element topic="Extracción-de-Descriptores.md"/>
+        <toc-element topic="Herramientas.md"/>
     </toc-element>
 </instance-profile>
