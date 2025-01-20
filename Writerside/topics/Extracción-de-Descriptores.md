@@ -67,6 +67,36 @@ debug_level
     - ```descriptores.formas.euler_moment``` 
     - ```descriptores.formas.compactness``` 
 
+```
+extraccion_ocr(imagenes, opciones, fichero_destino,debug_level)
+```
+Función que a partir de una ```list``` de imágenes y una ```list```con opciones extrar un fichero ```ARFF``` con la columna "label" = "?".
+Su principal uso es extraer las propiedades de una imagen con la cual se quiere realizar una predicción.
+
+images
+: ```list``` Debe contener la imagen extraída con OpenCV.IMREAD.
+
+opciones
+: ```String``` que contiene "histogramas" o "formas" según el tipo que de extracción que se quiera realizar
+
+fichero_destino
+: ```String``` que contiene el ```path``` en el que la función tendrá que crear el archivo ARFF
+
+debug_level
+: ```int```: cantidad de notificaciones que deben mostrarse en pantalla sobre el progreso. Por defecto es 0.
+
+**kwargs
+: ```list``` con contenido que depende de la opción elegida en el parámetro ```opciones```.
+- "Histogramas": los kwargs deberán contener una ```list``` llamada ```histoptions``` con los parámetros:
+  - ```Orientaciones```: int
+  - ```Píxeles por celda```: int
+  - ```Celdas por bloque```: int
+  - ```feature_vector```: Boolean
+- "Formas": los kwargs deberán contener una ```list``` llamada "formas" en las que se incluyen las funciones para extraer los descriptores de formas:
+  - ```descriptores.formas.hu_moments```
+  - ```descriptores.formas.aspect_ratio```
+  - ```descriptores.formas.euler_moment```
+  - ```descriptores.formas.compactness```
 
 ## formas.py
 
@@ -88,6 +118,8 @@ Función que devuelve la compacidad en forma ```float``` de una imagen. [docs](h
 
 image
 : ```np.array```: que contiene la imagen extraída por OpenCV
+
+
 
 <br/>
 ```

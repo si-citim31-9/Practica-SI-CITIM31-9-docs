@@ -20,6 +20,10 @@ Este paquete contiene las herramientas necesarias para extraer los descriptores 
 ### [Entrenamiento](Entrenamiento.md)
 
 Este paquete contiene las herramientas necesarias para el entrenamiento de un modelo y su posterior aplicación como herramienta OCR
-
 - main.py
 - ocr.py
+
+### [Herramientas](Herramientas.md)
+
+Este paquete contiene funciones para el manejo de imágenes y ficheros.
+- General.py
