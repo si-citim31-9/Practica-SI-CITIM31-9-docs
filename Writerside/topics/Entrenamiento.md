@@ -6,7 +6,7 @@ Este paquete contiene dos módulos:
 
 ## main.py
 
-### Funciones 
+##### training 
 
 ```
 training(dataset, fichsalida, clasificador, debug_level)
@@ -28,7 +28,7 @@ debug_level
 : ```int```: cantidad de notificaciones que deben mostrarse en pantalla sobre el progreso. Por defecto es 0.
 
 
-
+##### obtener_modelo
 ```
 obtener_modelo(opciones, classifiers, path_recursos, raiz_proyecto)
 ```
@@ -50,8 +50,7 @@ raiz_proyecto
 
 ## ocr.py
 
-### Función de reconocimiento
-
+##### predecir
 ```
 predecir(modelo_path, arff_path)
 ```

@@ -4,10 +4,8 @@ El paquete descriptores contiene un módulo principal de procesamiento (extracci
 
 ## extraccion.py
 
-### Funciones de extracción:
-<br/>
-
-
+Funciones relacionadas con el procesamiento individual/grupal de las imágenes y la extracción de sus descriptores
+##### obtener_imagenes
 ```
 obtener_imagenes(path_recursos)
 ```
@@ -21,7 +19,8 @@ path_recursos
 > El formato de los dataset debe ser: ```<num>/<num>_<indice>.png```
 > Siendo los números (0-35) es decir (0-9 y a-z) y el índice representando el número de archivo en la carpeta.
 
-<br/>
+
+##### extraccion_batch
 ```
 extraccion_batch(imagenes, opciones, debug_level)
 ```
@@ -37,6 +36,7 @@ opciones
 debug_level
 : ```int```: cantidad de notificaciones que deben mostrarse en pantalla sobre el progreso. Por defecto es 0.
 
+##### extraccion
 ```
 extraccion(images, opciones, fichero_destino, debug_level, **kwargs)
 ```
@@ -67,6 +67,7 @@ debug_level
     - ```descriptores.formas.euler_moment``` 
     - ```descriptores.formas.compactness``` 
 
+##### extraccion_ocr
 ```
 extraccion_ocr(imagenes, opciones, fichero_destino,debug_level)
 ```
@@ -100,8 +101,9 @@ debug_level
 
 ## formas.py
 
-### Funciones de formas:
+Funciones relacionadas con la extracción de descriptores de formas.
 
+##### aspect_ratio
 ```
 aspect_ratio(image)
 ```
@@ -110,7 +112,6 @@ Función que devuelve el ratio de aspecto en forma ```double``` de una imagen.
 image
 : ```np.array```: que contiene la imagen extraída por OpenCV
 
-<br/>
 ```
 compactness(image)
 ```
@@ -120,8 +121,7 @@ image
 : ```np.array```: que contiene la imagen extraída por OpenCV
 
 
-
-<br/>
+##### hu_moments
 ```
 hu_moments(image)
 ```
@@ -130,7 +130,8 @@ Función que devuelve los momentos invariables de Hu en forma ```list (float)```
 image
 : ```np.array```: contiene la imagen extraída por OpenCV
 
-<br/>
+
+##### euler_number
 ```
 euler_number(image)
 ```
@@ -141,8 +142,9 @@ image
 
 ## histogramasgo.py
 
-### Funciones de Histogramas:
+Funciones relacionadas con la extracción de histogramas.
 
+##### extraer_histogramas
 ```
 extraer_histogramas(imagen,orientaciones, pixelspercell,cellsperblock,tamano)
 ```

@@ -2,6 +2,7 @@
 
 Este paquete contiene funciones varias.
 
+##### traducir_predicciones
 ```
 traducir_predicciones(predicciones)
 ```
@@ -10,6 +11,22 @@ A partir de una `list` de números del rango `0-35` obtiene sus equivalentes en 
 predicciones
 : `list("String")` : Lista con el output de una predicción
 
+##### contar_carpetas
+```
+contar_carpetas(ruta)
+```
+A partir de un `path` devuelve el número de carpetas/directorios que contiene
+
+ruta
+: `path`: Ruta absoluta a la carpeta/directorio
+
+##### obtener_pngs
+```
+obtener_pngs(ruta)
+```
+A partir de un `path` obtiene las rutas a todos los archivos `.png` que existen en el directorio en forma de `list(String)`.
+
+##### eliminar_archivos_no_usados
 ```
 eliminar_archivos_no_usados(carpeta_datasets, carpeta_modelos, resultado)
 ```
@@ -24,6 +41,7 @@ carpeta_modelos
 resultado
 : `list`: output de la función de `obtener_modelo`
 
+##### eliminar_archivos
 ```
 eliminar_archivos(ruta_carpeta)
 ```
@@ -32,6 +50,7 @@ Función que elimina todos los archivos de una carpeta
 ruta_carpeta
 : `path`: ruta absoluta a la carpeta
 
+##### procesar_imagen
 ```
 procesar_imagen(imagen)
 ```
@@ -40,6 +59,7 @@ Función que aplica unos ajustes (convierte a binaria) para preparar una imagen 
 imagen
 : `path`: ruta absoluta a la imagen
 
+##### mostrar_imagen
 ```
 mostrar_imagen(imagen)
 ```
@@ -48,7 +68,7 @@ Función para mostrar una imagen (para pruebas)
 imagen
 : `np.array`: imagen ya abierta con `OpenCV.imread`
 
-
+##### tqdm_conditional
 ```
 tqdm_conditional(iterable,desc,debug_level)
 ```
